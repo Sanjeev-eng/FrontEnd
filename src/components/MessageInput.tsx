@@ -31,18 +31,18 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, onTyping }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 p-4 bg-white dark:bg-zinc-900 border-t border-slate-200 dark:border-zinc-800">
+    <form onSubmit={handleSubmit} className="flex gap-2 bg-white dark:bg-zinc-900">
       <input
         type="text"
         value={text}
         onChange={handleChange}
-        placeholder="Type a message..."
-        className="flex-1 px-4 py-3 bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
+        placeholder="Type here..."
+        className="flex-1 px-0 py-3 bg-transparent border-none focus:ring-0 outline-none transition-all text-slate-800 dark:text-zinc-200 placeholder:text-slate-300 dark:placeholder:text-zinc-700"
       />
       <button
         type="submit"
         disabled={!text.trim()}
-        className="p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl transition-all disabled:opacity-50 disabled:bg-slate-400"
+        className="p-2 text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 transition-all disabled:opacity-0"
       >
         <Send className="w-5 h-5" />
       </button>
