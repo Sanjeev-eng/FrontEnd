@@ -14,7 +14,7 @@ interface Message {
 
 const ChatRoom: React.FC = () => {
   const { roomId } = useParams<{ roomId: string }>();
-  const { socket, isConnected } = useSocket();
+  const { socket } = useSocket();
   const navigate = useNavigate();
   
   const [messages, setMessages] = useState<Message[]>([]);
